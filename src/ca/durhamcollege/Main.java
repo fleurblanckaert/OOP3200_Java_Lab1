@@ -18,7 +18,7 @@ public class Main {
         int games = 2;
         int people = 3;
         int[][] bowling = new int[people][games];
-        String[] names = new String[]{"Fleur's", "Gabriel's", "Tom's"};
+        String[] names = new String[]{"Fleur", "Gabriel", "Tom"};
         boolean isValidInput = false;
         int minScore = 0;
         int maxScore = 300;
@@ -39,7 +39,7 @@ public class Main {
                     try
                     {
                         //Prompts the user to enter the scores for the game
-                        System.out.print("Please enter " + names[y] + " score for GAME #" + (x + 1) + ": ");
+                        System.out.print("Please enter " + names[y] + "'s score for GAME #" + (x + 1) + ": ");
                         bowling[y][x] = keyboard.nextInt();
 
 
@@ -74,7 +74,7 @@ public class Main {
             System.out.println("Score Details for " + names[i] + ":");
             for(int j = 0; j < games; j++)
             {
-                System.out.println("Game # " + j + ": " + bowling[i][j]);
+                System.out.println("Game # " + (j+1) + ": " + bowling[i][j]);
                 totalScore += bowling[i][j];
             }
 
